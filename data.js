@@ -27,11 +27,11 @@ export const Fitur = [
     },
     {
       id: 2,
-      image:require('./src/assets/img/iphone15promax.jpg'),
+      image:require('./src/assets/img/samsung23.jpg'),
     },
     {
       id: 3,
-      image:require('./src/assets/img/iphone15promax.jpg'),
+      image:require('./src/assets/img/samsung22.jpg'),
     },
   ];
   export const DataProduct = [
@@ -63,4 +63,9 @@ export const Fitur = [
 
     },
   ];
+  export const ProfileData = {
+    profilePict:
+      'https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    name: 'Saiful',
+  };
   

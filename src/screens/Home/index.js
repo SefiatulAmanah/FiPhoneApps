@@ -6,11 +6,12 @@ import {
   Image,
   StyleSheet,
   ScrollView,
+  Text,
 } from 'react-native';
 import {SearchNormal1} from 'iconsax-react-native';
 import {Iklan, DataProduct} from '../../../data';
 import {fontType} from '../../theme';
-import {Product} from '../../components';
+import {ListIklan, ListProduct} from '../../components';
 
 export default Home = () => {
   return (
@@ -34,24 +35,38 @@ export default Home = () => {
       <View>
         <XtProduct />
       </View>
+      <View style={styles.containerProduct}>
+        <Text>Recommendation</Text>
+        <Product />
+      </View>
+      <View style={styles.containerProduct}>
+        <Text>Recommendation</Text>
+        <Product />
+      </View>
     </View>
   );
 };
 
 const XtProduct = () => {
   return (
-    <ScrollView style={{backgroundColor:'#000000'}}>
-      <Product data={Iklan} />
-    </ScrollView>
+    <View style={{paddingVertical: 5}}>
+      <ListIklan data={Iklan} />
+    </View>
   );
 };
 
+const Product = () => {
+  return (
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={styles.listCard}>
+        <ListProduct data={DataProduct} />
+      </View>
+    </ScrollView>
+  );
+};
 const styles = StyleSheet.create({
   containerProduct: {
-    marginLeft: 8,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
+    margin: 10,
     // paddingLeft : 16,
   },
   container: {

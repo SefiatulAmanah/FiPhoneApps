@@ -1,3 +1,4 @@
-import Product from "./Iklan";
-import { Iklan } from "../../data";
-export {Iklan, Product}
+
+import ListIklan from "./Iklan";
+import ListProduct from "./Product";
+export {ListIklan, ListProduct}

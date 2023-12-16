@@ -3,20 +3,14 @@ import {Iklan, DataProduct} from '../../data';
 import {Text, StyleSheet, FlatList, View, TouchableOpacity} from 'react-native';
 import {Image} from 'react-native';
 
-const ItemProduct = ({item}) => {
+const ItemIklan = ({item}) => {
   return (
-    <TouchableOpacity>
-      <View style={{marginVertical:10}}>
-        <Image
-          style={styles.iklanImage}
-          resizeMode="cover"
-          source={item.image}
-        />
-      </View>
-    </TouchableOpacity>
+    <View style={{marginVertical: 10}}>
+      <Image style={styles.iklanImage} resizeMode="cover" source={item.image} />
+    </View>
   );
 };
-const Product = ({data}) => {
+const ListIklan = ({data}) => {
   const [bookmark, setBookmark] = useState([]);
   const toggleBookmark = itemId => {
     if (bookmark.includes(itemId)) {
@@ -28,7 +22,7 @@ const Product = ({data}) => {
   const renderItem = ({item}) => {
     variant = bookmark.includes(item.id) ? 'Bold' : 'Linear';
     return (
-      <ItemProduct
+      <ItemIklan
         item={item}
         variant={variant}
         onPress={() => toggleBookmark(item.id)}
@@ -47,7 +41,7 @@ const Product = ({data}) => {
     />
   );
 };
-export default Product;
+export default ListIklan;
 
 const styles = StyleSheet.create({
   container: {
